@@ -1,0 +1,8 @@
+C:\Users\ibookpc\AppData\Local\Temporary Projects\Physics\bin\Debug\Physics.exe
+C:\Users\ibookpc\AppData\Local\Temporary Projects\Physics\bin\Debug\Physics.pdb
+C:\Users\ibookpc\AppData\Local\Temporary Projects\Physics\obj\x86\Debug\Physics.exe
+C:\Users\ibookpc\AppData\Local\Temporary Projects\Physics\obj\x86\Debug\Physics.pdb
+F:\Загрузки\Physics\Physics\obj\x86\Debug\Physics.exe
+F:\Загрузки\Physics\Physics\obj\x86\Debug\Physics.pdb
+F:\Загрузки\Physics\Physics\bin\Debug\Physics.exe
+F:\Загрузки\Physics\Physics\bin\Debug\Physics.pdb
