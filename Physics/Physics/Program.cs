@@ -10,12 +10,12 @@ namespace Physics
         static void Main(string[] args)
         {
             Converter converter = new Converter();
-            Time t = new Time(2);
-            Speed v = new Speed(5);
+            Time t = new Time(5);
+            Speed v = new Speed(10);
             Distance s = new Distance(10);
-            Acceleration a = new Acceleration(30);
-            a=converter.ConvertToSI(a);
-            Console.WriteLine(a.value);
+            Acceleration a = new Acceleration(2);
+            v = s / t;
+            Console.WriteLine(v.value);
             Console.ReadLine();
         }
     }

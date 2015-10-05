@@ -8,6 +8,8 @@ namespace Physics
     class Time:Measure
     {        
         public string timeType = "h";
+        
+
         public Time(double value)
         {
             this.value = value;
@@ -30,15 +32,19 @@ namespace Physics
         public static Distance operator *(Time t, Speed v)
         {
             Distance s = new Distance(0);
-            s.value = v.value * t.value;
-            return s;
+            s.distanceType = v.distanceType;
+            Converter converter = new Converter();
+            s.value = converter.ConvertToSI(v).value * converter.ConvertToSI(t).value;
+            return converter.ConvertFromSI(s);
         }
 
         public static Speed operator *(Time t, Acceleration a)
         {
             Speed v = new Speed(0);
-            v.value = a.value * t.value;
-            return v;
+            v.distanceType = a.distanceType;
+            Converter converter = new Converter();
+            v.value = converter.ConvertToSI(a).value * converter.ConvertToSI(t).value;
+            return converter.ConvertFromSI(v);
         }
     }
 }

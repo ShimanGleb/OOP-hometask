@@ -31,8 +31,12 @@ namespace Physics
         public static Speed operator / (Distance s, Time t)
         {
             Speed v = new Speed(0);
-            v.value= s.value/t.value ;
-            return v;
+            v.distanceType = s.distanceType;
+            v.timeType = t.timeType;
+            Converter converter = new Converter();
+            v.value = converter.ConvertToSI(s).value / converter.ConvertToSI(t).value;
+
+            return converter.ConvertFromSI(v);
         }
     }
 }

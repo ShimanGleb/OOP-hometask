@@ -40,11 +40,27 @@ namespace Physics
             return newValue;
         }
 
+        public Distance ConvertFromSI(Distance x)
+        {
+            Distance newValue = new Distance(1);
+            newValue.distanceType = x.distanceType;
+            newValue.value = x.value / ConvertDistanceToSI(newValue);
+            return newValue;
+        }
+
         public Time ConvertToSI(Time x)
         {
             Time newValue = new Time(0);
             newValue.timeType = "s";
             newValue.value = ConvertTimeToSI(x);
+            return newValue;
+        }
+
+        public Time ConvertFromSI(Time x)
+        {
+            Time newValue = new Time(1);
+            newValue.timeType = x.timeType;
+            newValue.value = x.value / ConvertTimeToSI(newValue);
             return newValue;
         }
 
@@ -64,6 +80,24 @@ namespace Physics
             return newValue;
         }
 
+        public Speed ConvertFromSI(Speed x)
+        {
+            Speed newValue = new Speed(0);
+            newValue.distanceType = x.distanceType;
+            newValue.timeType = x.timeType;
+
+            Distance s = new Distance(x.value);
+            s.distanceType = x.distanceType;
+            s = ConvertFromSI(s);
+
+            Time t = new Time(1);
+            t.timeType = x.timeType;            
+            t = ConvertFromSI(t);
+
+            newValue.value = s.value / t.value;
+            return newValue;
+        }
+
         public Acceleration ConvertToSI(Acceleration x)
         {
             Acceleration newValue = new Acceleration(0);
@@ -75,6 +109,23 @@ namespace Physics
             Time t = new Time(1);
             t.timeType = x.timeType;            
             newValue.value = v.value / ConvertTimeToSI(t);
+
+            return newValue;
+        }
+
+        public Acceleration ConvertFromSI(Acceleration x)
+        {
+            Acceleration newValue = new Acceleration(0);
+            newValue.distanceType = x.distanceType;
+            newValue.timeType = x.timeType;
+
+            Speed v = new Speed(x.value);
+            v = ConvertFromSI(v);
+
+            Time t = new Time(1);
+            t.timeType = x.timeType;
+            t = ConvertFromSI(t);
+            newValue.value = v.value / t.value;
 
             return newValue;
         }
