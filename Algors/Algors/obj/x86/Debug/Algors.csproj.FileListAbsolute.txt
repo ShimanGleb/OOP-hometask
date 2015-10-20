@@ -1,0 +1,7 @@
+F:\Загрузки\Algors\Algors\bin\Debug\Algors.exe
+F:\Загрузки\Algors\Algors\bin\Debug\Algors.pdb
+F:\Загрузки\Algors\Algors\obj\x86\Debug\Algors.csprojResolveAssemblyReference.cache
+F:\Загрузки\Algors\Algors\obj\x86\Debug\Algors.exe
+F:\Загрузки\Algors\Algors\obj\x86\Debug\Algors.pdb
+f:\Загрузки\Algors\Algors\bin\Debug\ContainerLibrary.dll
+f:\Загрузки\Algors\Algors\bin\Debug\ContainerLibrary.pdb

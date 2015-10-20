@@ -1,0 +1,5 @@
+F:\Загрузки\Algors\ContainerLibrary\bin\Debug\ContainerLibrary.dll
+F:\Загрузки\Algors\ContainerLibrary\bin\Debug\ContainerLibrary.pdb
+F:\Загрузки\Algors\ContainerLibrary\obj\Debug\ContainerLibrary.dll
+F:\Загрузки\Algors\ContainerLibrary\obj\Debug\ContainerLibrary.pdb
+f:\Загрузки\Algors\ContainerLibrary\obj\Debug\ContainerLibrary.csprojResolveAssemblyReference.cache
