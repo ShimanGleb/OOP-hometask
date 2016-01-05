@@ -1,0 +1,4 @@
+F:\Загрузки\Physics\Measures\bin\Debug\Measures.dll
+F:\Загрузки\Physics\Measures\bin\Debug\Measures.pdb
+F:\Загрузки\Physics\Measures\obj\Debug\Measures.dll
+F:\Загрузки\Physics\Measures\obj\Debug\Measures.pdb

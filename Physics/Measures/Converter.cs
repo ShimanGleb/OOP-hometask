@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Physics
+namespace Measures
 {
-    class Converter
+    public class Converter
     {
         public double ConvertTimeToSI(Time x)
         {
-            double value = 0;
+            double value = x.value;
             switch (x.timeType)
             {
                 case ("h"): value = x.value * 3600; break;
@@ -21,7 +21,7 @@ namespace Physics
 
         public double ConvertDistanceToSI(Distance x)
         {
-            double value = 0;
+            double value = x.value;
             switch (x.distanceType)
             {
                 case ("mile"): value = x.value * 1609.27; break;

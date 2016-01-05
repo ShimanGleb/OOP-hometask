@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Physics
+namespace Measures
 {
-    class Speed:Measure
+    public class Speed :Measure, IMeasure
     {
         public string distanceType = "km";
         public string timeType = "h";
@@ -13,6 +13,16 @@ namespace Physics
         public Speed(double value)
         {
             this.value = value;
+        }
+
+        public string GiveValueInSI()
+        {
+            Speed x = new Speed(value);
+            x.distanceType = distanceType;
+            x.timeType = timeType;
+            Converter conv = new Converter();
+            string message = conv.ConvertToSI(x).value + " m/s";
+            return message;
         }
 
         public static Speed operator +(Speed v1, Speed v2)

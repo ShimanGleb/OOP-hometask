@@ -7,3 +7,6 @@ F:\Загрузки\Physics\Physics\obj\x86\Debug\Physics.pdb
 F:\Загрузки\Physics\Physics\bin\Debug\Physics.exe
 F:\Загрузки\Physics\Physics\bin\Debug\Physics.pdb
 f:\Загрузки\Physics\Physics\obj\x86\Debug\Physics.csprojResolveAssemblyReference.cache
+f:\Загрузки\Physics\Physics\bin\Debug\Physics.exe.config
+f:\Загрузки\Physics\Physics\bin\Debug\Measures.dll
+f:\Загрузки\Physics\Physics\bin\Debug\Measures.pdb
