@@ -9,6 +9,6 @@ namespace ContainerLibrary
     {
         string ReturnValue(string name);
 
-        int compareValues(StringContainer container, string name);
+        int compareValues(AbstractStringContainer container, string name);
     }
 }

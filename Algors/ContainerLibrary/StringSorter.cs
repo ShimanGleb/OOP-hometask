@@ -7,15 +7,15 @@ namespace ContainerLibrary
 {
     public class StringSorter
     {
-        public void SortByInsertion(List<StringContainer> array, string variableName)
+        public void SortByInsertion(List<AbstractStringContainer> array, string variableName)
         {
             for (int i = 1; i < array.Count; i++)
             {
                 int j = i;
 
                 while (j != 0 && array[j].compareValues(array[j - 1], variableName) == 1)
-                {                    
-                    StringContainer x = array[j];
+                {
+                    AbstractStringContainer x = array[j];
                     array[j] = array[j - 1];
                     array[j - 1] = x;
                     j--;
@@ -23,11 +23,11 @@ namespace ContainerLibrary
             }
         }
 
-        public void SortBySelecting(List<StringContainer> array, string variableName)
+        public void SortBySelecting(List<AbstractStringContainer> array, string variableName)
         {
             for (int i = 0; i < array.Count - 1; i++)
             {
-                StringContainer minElement = array[i];
+                AbstractStringContainer minElement = array[i];
                 int minindex = i;
                 for (int j = i + 1; j < array.Count; j++)
                 {
@@ -37,13 +37,13 @@ namespace ContainerLibrary
                         minindex = j;
                     }
                 }
-                StringContainer x = array[i];
+                AbstractStringContainer x = array[i];
                 array[i] = array[minindex];
                 array[minindex] = x;
             }
         }
 
-        public void SortByExchange(List<StringContainer> array, string variableName)
+        public void SortByExchange(List<AbstractStringContainer> array, string variableName)
         {
             int l = 0;
             int r = array.Count - 1;
@@ -54,7 +54,7 @@ namespace ContainerLibrary
                 {
                     if (array[j - 1].compareValues(array[j], variableName) == -1)
                     {
-                        StringContainer x = array[j - 1];
+                        AbstractStringContainer x = array[j - 1];
                         array[j - 1] = array[j];
                         array[j] = x;
                         k = j;
@@ -65,7 +65,7 @@ namespace ContainerLibrary
                 {
                     if (array[j - 1].compareValues(array[j], variableName) == -1)
                     {
-                        StringContainer x = array[j - 1];
+                        AbstractStringContainer x = array[j - 1];
                         array[j - 1] = array[j];
                         array[j] = x;
                         k = j - 1;

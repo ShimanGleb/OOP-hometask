@@ -7,7 +7,7 @@ namespace ContainerLibrary
 {
     public class DoubleSorter
     {
-        public void SortByInsertion(List<DoubleContainer> array, string variableName)
+        public void SortByInsertion(List<AbstractDoubleContainer> array, string variableName)
         {
             for (int i = 1; i < array.Count; i++)
             {
@@ -15,7 +15,7 @@ namespace ContainerLibrary
 
                 while (j != 0 && array[j].compareValues(array[j - 1], variableName) == 1)
                 {
-                    DoubleContainer x = array[j];
+                    AbstractDoubleContainer x = array[j];
                     array[j] = array[j - 1];
                     array[j - 1] = x;
                     j--;
@@ -23,11 +23,11 @@ namespace ContainerLibrary
             }
         }
 
-        public void SortBySelecting(List<DoubleContainer> array, string variableName)
+        public void SortBySelecting(List<AbstractDoubleContainer> array, string variableName)
         {
             for (int i = 0; i < array.Count - 1; i++)
             {
-                DoubleContainer minElement = array[i];
+                AbstractDoubleContainer minElement = array[i];
                 int minindex = i;
                 for (int j = i + 1; j < array.Count; j++)
                 {
@@ -37,13 +37,13 @@ namespace ContainerLibrary
                         minindex = j;
                     }
                 }
-                DoubleContainer x = array[i];
+                AbstractDoubleContainer x = array[i];
                 array[i] = array[minindex];
                 array[minindex] = x;
             }
         }
 
-        public void SortByExchange(List<DoubleContainer> array, string variableName)
+        public void SortByExchange(List<AbstractDoubleContainer> array, string variableName)
         {
             int l = 0;
             int r = array.Count - 1;
@@ -54,7 +54,7 @@ namespace ContainerLibrary
                 {
                     if (array[j - 1].compareValues(array[j], variableName) == -1)
                     {
-                        DoubleContainer x = array[j - 1];
+                        AbstractDoubleContainer x = array[j - 1];
                         array[j - 1] = array[j];
                         array[j] = x;
                         k = j;
@@ -65,7 +65,7 @@ namespace ContainerLibrary
                 {
                     if (array[j - 1].compareValues(array[j], variableName) == -1)
                     {
-                        DoubleContainer x = array[j - 1];
+                        AbstractDoubleContainer x = array[j - 1];
                         array[j - 1] = array[j];
                         array[j] = x;
                         k = j - 1;

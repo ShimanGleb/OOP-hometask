@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ContainerLibrary
 {
-    public class DoubleContainer: IDoubleContainer
+    public class DoubleContainer: AbstractDoubleContainer
     {
         double value1 = 0.0;
 
@@ -14,7 +14,7 @@ namespace ContainerLibrary
             value1 = i;
         }
         
-        public double ReturnValue(string name)
+        public override double ReturnValue(string name)
         {
             if (name == "value1")
             {
@@ -23,7 +23,7 @@ namespace ContainerLibrary
             return 0.0;
         }
 
-        public int compareValues(DoubleContainer container, string name)
+        public override int compareValues(AbstractDoubleContainer container, string name)
         {
             double comparingValue = 0.0;
             if (name == "value1")

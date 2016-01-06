@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractDoubleContainer.cs" />
+    <Compile Include="AbstractStringContainer.cs" />
     <Compile Include="DoubleContainer.cs" />
     <Compile Include="DoubleSorter.cs" />
     <Compile Include="IDoubleContainer.cs" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ContainerLibrary
 {
-    public class StringContainer: IStringContainer
+    public class StringContainer: AbstractStringContainer
     {
         string value1 = "";
 
@@ -14,7 +14,7 @@ namespace ContainerLibrary
             value1 = i.ToString();
         }
 
-        public string ReturnValue(string name)
+        public override string ReturnValue(string name)
         {
             if (name == "value1")
             {
@@ -23,7 +23,7 @@ namespace ContainerLibrary
             return "";
         }
 
-        public int compareValues(StringContainer container, string name)
+        public override int compareValues(AbstractStringContainer container, string name)
         {
             string comparingValue="";
             if (name == "value1")
